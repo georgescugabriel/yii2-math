@@ -21,7 +21,7 @@ class Math extends Widget
      */
     public static function formatNumber($number, $precision = null, $dDelimiter = '.', $tDelimiter = ',')
     {
-        if (!$precision) {
+        if ($precision===null) {
             $precision = static::precision;
         }
 
