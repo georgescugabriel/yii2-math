@@ -1,6 +1,6 @@
 <?php
 
-namespace common\extension;
+namespace gabrielgeorgescu\math;
 
 use yii\base\Widget;
 
@@ -57,8 +57,6 @@ class Math extends Widget
 
     /**
      * Return subtract between two numbers
-     * Revert subtract
-     * Absolute value
      *
      * @param $s1
      * @param $s2
@@ -79,5 +77,28 @@ class Math extends Widget
             return static::formatNumber(abs($s1 - $s2));
         }
         return static::formatNumber($s1 - $s2);
+    }
+
+    /**
+     * Return subtract between n numbers
+     *
+     * @param array $number
+     * @param bool $revert
+     * @param bool $absolute
+     * @return string
+     */
+    public static function Subtract($number = [], $revert = false, $absolute = false)
+    {
+        if($revert){
+            $number = array_reverse($number);
+        }
+        $diff = $number[0];
+        foreach($number as $n){
+            $diff-=$n;
+        }
+        if($absolute){
+            return static::formatNumber(abs($diff));
+        }
+        return static::formatNumber($diff);
     }
 }
