@@ -14,5 +14,11 @@
 		"psr-4": {
 			"common\\extension\\": ""
 		}
-	}
+	},
+    "repositories":[
+        {
+            "type": "git",
+            "url": "https://github.com/georgescugabriel/yii2-math.git"
+        }
+    ]
 }
