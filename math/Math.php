@@ -19,7 +19,7 @@ class Math extends Widget
      * @param string $tDelimiter Thousand delimiter
      * @return string
      */
-    public static function formatNumber($number, $dDelimiter = '.', $precision = null, $tDelimiter = ',')
+    public static function formatNumber($number, $precision = null, $dDelimiter = '.', $tDelimiter = ',')
     {
         if (!$precision) {
             $precision = static::precision;
@@ -101,4 +101,5 @@ class Math extends Widget
         }
         return static::formatNumber($diff);
     }
+
 }

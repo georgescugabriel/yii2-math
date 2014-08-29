@@ -1,7 +1,7 @@
 {
 	"name": "gabrielgeorgescu/yii2-math",
 	"description": "math functions",
-    "version": "1.0.0",
+    "version": "0.0.4",
 	"type": "yii2-extension",
 	"keywords": ["yii2","extension","math"],
 	"license": "Apache-2.0",
@@ -13,7 +13,7 @@
 	],
 	"autoload": {
 		"psr-4": {
-			"common\\extension\\": ""
+            "gabrielgeorgescu\\": ""
 		}
 	},
     "repositories":[
