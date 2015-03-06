@@ -2,8 +2,18 @@
 
 namespace gabrielgeorgescu\math;
 
-use yii\base\Widget;
+use yii\base\Widget as Widget;
 
+/**
+ * Class Math
+ *
+ * @package gabrielgeorgescu\math
+ *
+ * @author Gabriel Georgescu <georgescu.gabriel90@gmail.com>
+ * @copyright Copyright (c) 2015 Gabriel Georgescu
+ * @license New BSD License http://www.opensource.org/licenses/bsd-license.php
+ * @version 0.3
+ */
 class Math extends Widget
 {
 
@@ -183,5 +193,45 @@ class Math extends Widget
     public static function Factorial($number, $precision = null)
     {
         return static::formatNumber(gmp_fact($number), $precision);
+    }
+
+    /**
+     * Return value of root number with specific order
+     *
+     * @param $number
+     * @param $exponent
+     * @param null $precision
+     * @return string
+     */
+    public static function Roots($number, $exponent, $precision = null)
+    {
+        $result = pow($number, 1/$exponent);
+        return static::formatNumber($result, $precision);
+    }
+
+    /**
+     * Return value of exponential number
+     *
+     * @param $number
+     * @param $exponent
+     * @param null $precision
+     * @return string
+     */
+    public static function Exponential($number, $exponent, $precision = null)
+    {
+        $result = pow($number, $exponent);
+        return static::formatNumber($result, $precision);
+    }
+
+    /**
+     * Return absolute value of number
+     *
+     * @param $number
+     * @param null $precision
+     * @return string
+     */
+    public static function Absolute($number, $precision = null)
+    {
+        return static::formatNumber(gmp_abs($number), $precision);
     }
 }
