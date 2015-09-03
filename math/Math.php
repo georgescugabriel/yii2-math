@@ -184,4 +184,13 @@ class Math extends Widget
     {
         return static::formatNumber(gmp_fact($number), $precision);
     }
+    
+    /**
+     *
+     * @param 
+     * 
+     */
+    public static function Radical($number, $order = 2, $precision = null){
+        return static::formatNumber(pow($number, 1/$order), $precision);
+    }
 }
