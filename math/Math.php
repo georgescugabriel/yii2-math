@@ -196,9 +196,12 @@ class Math extends Widget
     }
     
     /**
+     * Return value of radical number with specific order
      *
-     * @param 
-     * 
+     * @param $number
+     * @param $order
+     * @param null $precision
+     * @return string
      */
     public static function Radical($number, $order = 2, $precision = null){
         return static::formatNumber(pow($number, 1/$order), $precision);
@@ -243,4 +246,6 @@ class Math extends Widget
     {
         return static::formatNumber(gmp_abs($number), $precision);
     }
+
+    
 }
